@@ -159,9 +159,12 @@ public class ProblemSet3 {
 	    }
 	}
 	
+	int i;
+	
 	public void factorialWithFor (int n) {
-	for (int n = in.nextInt(); n > 0; n--) {
-	    System.out.println(n);
+	    for (i = 1; i < n; i++) {
+		System.out.println(n * i);
+		n--
 	    }
 	}
 	

@@ -19,11 +19,10 @@ public class ProblemSet3 {
 	 * Make sure you're testing your code by calling your methods from the main method!
 	 */
     
-	Scanner in = new Scanner(System.in);
-	
+	private static Scanner in = new Scanner(System.in);
 	public static void main(String[] args) {
 		ProblemSet3 pset3 = new ProblemSet3();
-		System.out.println("Your clothing rating: ");
+		/**System.out.println("Your clothing rating: ");
 		int you = in.nextInt();
 		System.out.println("Your date's clothing rating: ");
 		int date = in.nextInt();
@@ -43,15 +42,12 @@ public class ProblemSet3 {
 		System.out.println("Is it the summer?");
 		boolean isSummer = in.nextBoolean();
 		pset3.squirrelPlay(temp, isSummer);
+		*/
 		System.out.println("Enter number: ");
 		int n = in.nextInt();
-		
+		pset3.factorialWithFor(n);
 		
 		in.close();
-		//pset3.loneSum(1, 2, 3);
-        //pset3.luckySum(1, 2, 3);
-        //pset3.squirrelPlay(68, false);
-        //pset3.factorialWithFor(3);
 	}
 	
 	public void dateFashion(int you, int date) {
@@ -162,10 +158,10 @@ public class ProblemSet3 {
 	int i;
 	
 	public void factorialWithFor (int n) {
-	    for (i = 1; i < n; i++) {
-		System.out.println(n * i);
-		n--
-	    }
+		for (int i = 1; i < (n + 1); i++) {
+			System.out.println(n * i);
+	    	n--;
+	  	}
 	}
 	
 	public void factorialWithWhile (int n) {

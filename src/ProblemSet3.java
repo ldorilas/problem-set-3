@@ -22,14 +22,27 @@ public class ProblemSet3 {
 	private static Scanner in = new Scanner(System.in);
 	public static void main(String[] args) {
 		ProblemSet3 pset3 = new ProblemSet3();
+		//exercise 1
 		/**System.out.println("Your clothing rating: ");
 		int you = in.nextInt();
 		System.out.println("Your date's clothing rating: ");
 		int date = in.nextInt();
 		pset3.dateFashion(you, date);
+		*/
+		
+		//exercise 2
 		System.out.println("Type a word: ");
 		String str = in.nextLine();
 		pset3.fizzString(str);
+		
+		/**exercise 3
+		System.out.println("Temperature outside: ");
+		int temp = in.nextInt();
+		System.out.println("Is it the summer?");
+		boolean isSummer = in.nextBoolean();
+		pset3.squirrelPlay(temp, isSummer);
+		
+		exercise 4
 		System.out.println("First integer: ");
 		int a = in.nextInt();
 		System.out.println("Second integer: ");
@@ -37,15 +50,12 @@ public class ProblemSet3 {
 		System.out.println("Third integer: ");
 		int c = in.nextInt();
 		pset3.loneSum(a, b, c);
-		System.out.println("Temperature outside: ");
-		int temp = in.nextInt();
-		System.out.println("Is it the summer?");
-		boolean isSummer = in.nextBoolean();
-		pset3.squirrelPlay(temp, isSummer);
-		*/
+
+		exercise 8
 		System.out.println("Enter number: ");
 		int n = in.nextInt();
 		pset3.factorialWithFor(n);
+		*/
 		
 		in.close();
 	}
@@ -89,6 +99,9 @@ public class ProblemSet3 {
 	else if ((first == 'f' && last == 'b') || (first == 'F' && last == 'B')) {
 	    System.out.println("FIZZBUZZ");
 	    }
+	else if ((first == 'F' && last == 'b') || (first == 'B' && last == 'f')) {
+		System.out.println("FIZZBUZZ");
+	}
 	else {
 	    System.out.println(str);
 	    }

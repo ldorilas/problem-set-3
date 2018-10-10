@@ -28,9 +28,8 @@ public class ProblemSet3 {
 		System.out.println("Your date's clothing rating: ");
 		int date = in.nextInt();
 		pset3.dateFashion(you, date);
-		*/
 		
-		//exercise 2
+		exercise 2
 		System.out.println("Type a word: ");
 		String str = in.nextLine();
 		pset3.fizzString(str);
@@ -50,8 +49,9 @@ public class ProblemSet3 {
 		System.out.println("Third integer: ");
 		int c = in.nextInt();
 		pset3.loneSum(a, b, c);
+		*/
 
-		exercise 8
+		//exercise 8
 		System.out.println("Enter number: ");
 		int n = in.nextInt();
 		pset3.factorialWithFor(n);
@@ -82,7 +82,7 @@ public class ProblemSet3 {
     else if (((you <= 7 && you > 2) || (date <= 7 && date > 2))) {
         System.out.println("MAYBE");
         }
-	}
+}
 	
 
 	
@@ -171,8 +171,8 @@ public class ProblemSet3 {
 	int i;
 	
 	public void factorialWithFor (int n) {
-		for (int i = 1; i < (n + 1); i++) {
-			System.out.println(n * i);
+	     for (int i = 1; i < (n + 1); i++) {
+		System.out.println(n * i);
 	    	n--;
 	  	}
 	}

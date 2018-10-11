@@ -22,26 +22,51 @@ public class ProblemSet3 {
 	private static Scanner in = new Scanner(System.in);
 	public static void main(String[] args) {
 		ProblemSet3 pset3 = new ProblemSet3();
+		
 		//exercise 1
-		/**System.out.println("Your clothing rating: ");
+		System.out.println("Your clothing rating: ");
 		int you = in.nextInt();
 		System.out.println("Your date's clothing rating: ");
 		int date = in.nextInt();
 		pset3.dateFashion(you, date);
 		
-		exercise 2
+		
+		//exercise 2
 		System.out.println("Type a word: ");
 		String str = in.nextLine();
 		pset3.fizzString(str);
 		
-		/**exercise 3
+		//exercise 3
 		System.out.println("Temperature outside: ");
 		int temp = in.nextInt();
 		System.out.println("Is it the summer?");
 		boolean isSummer = in.nextBoolean();
 		pset3.squirrelPlay(temp, isSummer);
 		
-		exercise 4
+		//exercise 4
+		System.out.println("Number: ");
+		int n = in.nextInt();
+		pset3.fizzStringAgain(n);
+		
+		//exercise 5 
+		System.out.println("Goal: ");
+		int goal = in.nextInt();
+		System.out.println("Number of small bricks: ");
+		int small = in.nextInt();
+		System.out.println("Number of big bricks: ");
+		int big = in.nextInt();
+		pset3.makeBricks(small, big, goal);
+        
+        //exercise 6
+        System.out.println("First integer: ");
+		int a = in.nextInt();
+		System.out.println("Second integer: ");
+		int b = in.nextInt();
+		System.out.println("Third integer: ");
+		int c = in.nextInt();
+		pset3.loneSum(a, b, c);
+		
+		//exercise 7
 		System.out.println("First integer: ");
 		int a = in.nextInt();
 		System.out.println("Second integer: ");
@@ -49,13 +74,23 @@ public class ProblemSet3 {
 		System.out.println("Third integer: ");
 		int c = in.nextInt();
 		pset3.loneSum(a, b, c);
-		*/
-
-		//exercise 8
+        
+	    //exercise 8
 		System.out.println("Enter number: ");
 		int n = in.nextInt();
 		pset3.factorialWithFor(n);
-		*/
+		
+		
+        //exercise 9
+		System.out.println("Enter number: ");
+		int x = in.nextInt();
+		pset3.factorialWithWhile(x);
+		
+		//exercise 10
+		System.out.println("Enter number: ");
+		int n = in.nextInt();
+		pset3.isPrime(n);
+		
 		
 		in.close();
 	}
@@ -82,13 +117,14 @@ public class ProblemSet3 {
     else if (((you <= 7 && you > 2) || (date <= 7 && date > 2))) {
         System.out.println("MAYBE");
         }
-}
+    }
 	
 
 	
 	public void fizzString(String str) {	
+	int stringlen = str.length();
 	char first = str.charAt(0);
-	char last = str.charAt(str.length() - 1);
+	char last = str.charAt();
 	
 	if (first == 'f' || first == 'F') {
 		System.out.println("FIZZ");
@@ -96,41 +132,55 @@ public class ProblemSet3 {
 	else if (last == 'b' || last == 'B') {
 		System.out.println("BUZZ");
 	    }
-	else if ((first == 'f' && last == 'b') || (first == 'F' && last == 'B')) {
+	else if (((first == 'f' || first == 'F') && (last == 'b' || last == 'B'))) {
 	    System.out.println("FIZZBUZZ");
 	    }
-	else if ((first == 'F' && last == 'b') || (first == 'B' && last == 'f')) {
-		System.out.println("FIZZBUZZ");
-	}
 	else {
 	    System.out.println(str);
 	    }
 	}
 	
 	public void squirrelPlay (int temp, boolean isSummer) {
-	if ((temp >= 60 && temp <= 90) && isSummer == false) {
+	if (isSummer = false) {
+	    if (temp >= 60 && temp <= 90) {
 	    System.out.println("YES");
 	    }
-	else if ((temp > 90 && temp <= 100) && isSummer == true) {
-	    System.out.println("NO");
+	    else {
+	        System.out.println("NO");
 	    }
-	else if ((temp >= 60 && temp <= 90) && isSummer == true) {
-		
+	}
+	else {
+	   if (temp >= 60 && temp <= 90) {
+	    System.out.println("YES");
+	    }
+	else {
+		System.out.println("NO");
 		}
 	}
+}
 	
 	public void fizzStringAgain (int n) {
-	    
-	}
+	    if ((n % 3) == 0) {
+	        System.out.println("FIZZ");
+	    }
+	    else if ((n % 5) == 0) {
+	        System.out.println("BUZZ");
+	        }
+	    else if ((n % 3) && (n % 5) != 0) {
+	        System.out.println(n + "!");
+	    }
+	    else if ((n % 3) && (n % 5) == 0) {
+	        System.out.println("FIZZBUZZ");
+	    }
 	
 	public void makeBricks (int small, int big, int goal) {
-	small = in.nextInt();
-	big = in.nextInt();
-	goal = in.nextInt();
-	if (((1 * small) + (5 * big)) >= goal) {
+	if (((1 * small) + (5 * big)) == goal) {
 		System.out.println("YES");
 		}
-	else if (((1 * small) + (5 * big)) >= goal) {
+	else if (((1 * small) + (5 * big)) > goal) {
+	    System.out.println("YES");
+	    }
+	else if (((1 * small) + (5 * big)) < goal) {
 		System.out.println("NO");
 		}
 	}
@@ -165,13 +215,13 @@ public class ProblemSet3 {
 	if (a != b && b != c && a != c) {
 	    System.out.println((a + b + c));
 	    } 
-	else if (a != b && b != c && c == 13) {
+	else if (a != b && c == 13) {
 	    System.out.println((a + b));
 	    }
-	else if (a != b && b == 13 && a != c) {
+	else if (b == 13 && b == c) {
 	    System.out.println((a));
 	    }
-	else if (a == 13 && b != c && a != c) {
+	else if (a == 13) {
 	    System.out.println(("0"));
 	    }
 	}
@@ -179,17 +229,56 @@ public class ProblemSet3 {
 	int i;
 	
 	public void factorialWithFor (int n) {
-	     for (int i = 1; i < (n + 1); i++) {
-		System.out.println(n * i);
-	    	n--;
+	int initialn = n;    
+	    for (int i = n; i > 0; i--) {
+	    if (i == n) {
+	        n = n * 1;
+	        }
+	    else if (n > i) {
+	        n = n * i;
+	        }
 	  	}
+	  	System.out.println(initialn + "! = " + n);
 	}
 	
-	public void factorialWithWhile (int n) {
-	    
+	public void factorialWithWhile (int x) {
+	int initialx = x;
+	int i = x;
+	while (i > 0) {
+	    if (i == x) {
+	        x = x * 1;
+	        i--;
+	        }
+	    else {
+	        x = x * i;
+	        i--;
+	        }
+	    }
+	    System.out.println(initialx + "! = " + x);
 	}
 	
 	public void isPrime (int n) {
-	    
+	boolean primeNum = false;
+	    int initialn = n;
+	    int i = n
+	    while (i > 0) {
+	        if (i == n) {
+	            n = initialn * 1;
+	            i--;
+	        }
+	        else {
+	            n = initialn % i;
+	            i--;
+	            if (n == 0) {
+	                primeNum = true;
+	            }
+	        }
+	    }
+	    if (primeNum == true) {
+	        System.out.println(initialn + " is not prime.");
+	    }
+	    if (primeNum = false) {
+	        System.out.println(initialn + " is prime.");
+	    }
 	}
 }

@@ -124,7 +124,15 @@ public class ProblemSet3 {
 	}
 	
 	public void makeBricks (int small, int big, int goal) {
-	    
+	small = in.nextInt();
+	big = in.nextInt();
+	goal = in.nextInt();
+	if (((1 * small) + (5 * big)) >= goal) {
+		System.out.println("YES");
+		}
+	else if (((1 * small) + (5 * big)) >= goal) {
+		System.out.println("NO");
+		}
 	}
 	
 	public void loneSum (int a, int b, int c) {
